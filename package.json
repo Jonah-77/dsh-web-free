@@ -1,0 +1,39 @@
+{
+  "name": "dsh-web-free",
+  "version": "1.0.0",
+  "description": "Replace DeepSeek Harness's paid web_search/web_fetch with free providers (Exa/Tavily keyless + local search script). No API key needed.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "websearch.py",
+    "selftest.py",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jonah-77/dsh-web-free.git"
+  },
+  "homepage": "https://github.com/Jonah-77/dsh-web-free#readme",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "web-search",
+    "free-search"
+  ]
+}

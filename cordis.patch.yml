@@ -1,0 +1,14 @@
+# dsh-web-free —— Cordis 装配层
+#
+# 两件事：
+#   1. insert 本插件（裸包名，装到 <profile>/node_modules/dsh-web-free 后由 Loader 解析）
+#   2. 把 web 能力缝的 search/fetch provider 钉成 free
+#      —— 不写这两行，插件装了也不会被选中，仍是官方 deepseek-official / http。
+- id: web
+  name: '@deepseek-ai/dsh-web'
+  config:
+    searchProvider: free
+    fetchProvider: free
+- insert:
+    - id: dsh-web-free
+      name: 'dsh-web-free'
